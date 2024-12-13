@@ -1,0 +1,17 @@
+The code doesn't define the 'getnews' property, which is used in the constructor.
+
+Solution:
+- Define the 'getnews' property: You need to declare the 'getnews' property as a final instance variable within the 'Detailnewspage' class.
+
+Code:
+class Detailnewspage extends StatelessWidget {
+  final Getnews getnews; 
+
+  const Detailnewspage({Key? key, required this.getnews}) : super(key: key); 
+
+  // ... rest of the code ...
+}
+
+Explanation:
+- 'final Getnews getnews': This line declares a final variable 'getnews' of type 'Getnews'. The 'final' keyword means that the value of this variable cannot be changed once assigned.
+- 'required this.getnews': This part of the constructor ensures that the 'getnews' parameter is passed when creating an instance of the 'Detailnewspage' class.
